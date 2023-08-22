@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Education</title>
+</head>
+<body>
+    <header>
+        <h1>Encryption vs. Hashing</h1>
+        <nav>
+            <ul>
+                <li><a href="#encryption-section">Encryption</a></li>
+                <li><a href="#hashing-section">Hashing</a></li>
+                <li><a href="#differences-section">Differences</a></li>
+                <li><a href="#applications-section">Applications</a></li>
+                <li><a href="#additional-info-section">Additional Info</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="left-side">
+        <section id="encryption-section" class="card">
+            <h2>Encryption</h2><br>
+            <p>Encryption is the process of converting data into a form that cannot be read by unauthorized individuals. This is done by using a mathematical algorithm to scramble the data, and then a key to unscramble it. The key is a secret that only the authorized individuals know.</p>
+            <p>There are two main types of encryption: symmetric key encryption and asymmetric key encryption.</p>
+            <ul><br>
+                <li><strong>Symmetric key encryption:</strong> Uses the same key to encrypt and decrypt data. It is faster but requires both sender and recipient to know the key.</li>
+                <li><strong>Asymmetric key encryption:</strong> Uses two different keys for encryption and decryption. It is more secure but slower.</li>
+            </ul><br>
+            <h3>How Encryption Works</h3>
+            <p>Encryption involves two main components: a plaintext (original data) and a secret key. The encryption algorithm uses the key to transform the plaintext into ciphertext, which is a scrambled version of the data. Only someone with the corresponding decryption key can reverse this process and obtain the original data.</p>
+            <br><h3>Use Cases of Encryption</h3>
+            <ul><br>
+                <li>Secure communication over the internet (HTTPS)</li>
+                <li>Data protection in storage (e.g., encrypting files)</li>
+                <li>Securing sensitive information like passwords and credit card numbers</li>
+            </ul><br>
+        </section>
+        <section id="hashing-section" class="card">
+            <h2>Hashing</h2><br>
+            <p>Hashing is a different type of security mechanism that is used to verify the authenticity of data. A hash function is a mathematical algorithm that takes an input of any size and produces an output of a fixed size. This output is called a hash value or digest.</p>
+            <p>The hash value of a piece of data is unique to that data. If even a single bit of the data is changed, the hash value will be completely different. This makes hash functions useful for verifying the integrity of data.</p>
+            <br><h3>How Hashing Works</h3>
+            <p>Hashing takes input data and applies a hashing algorithm to generate a unique fixed-length string of characters, known as a hash or hash code. The key characteristic of hashing is that it's a one-way process, meaning you cannot reverse the hash to obtain the original data.</p>
+            <h3>Use Cases of Hashing</h3>
+            <ul><br>
+                <li>Storing passwords securely: Hash passwords before storing them in databases</li>
+                <li>Data integrity verification: Check if data has been tampered with</li>
+                <li>Digital signatures</li>
+            </ul><br>
+        </section>
+        <section id="differences-section" class="card">
+            <h2>Differences between Encryption and Hashing</h2>
+            <ul><br>
+                <li><strong>Reversibility:</strong> Encryption is reversible, while hashing is irreversible.</li>
+                <li><strong>Purpose:</strong> Encryption is used to protect the confidentiality of data, while hashing is used to verify the authenticity of data.</li>
+                <li><strong>Applications:</strong> Encryption is typically used for data in transit, while hashing is typically used for data at rest.</li>
+            </ul><br>
+        </section>
+        <section id="applications-section" class="card">
+            <h2>Applications of Encryption and Hashing</h2>
+            <h3>Encryption</h3>
+            <ul><br>
+                <li>Encryption is a two-way process. The data is encrypted using a key, and then it can be decrypted using the same key.</li>
+                <li>The key can be either symmetric or asymmetric. A symmetric key is the same for both encryption and decryption. An asymmetric key has two different keys, one for encryption and one for decryption.</li>
+                <li>Encryption is used to protect the confidentiality of data. This means that only the intended recipient can read the data.</li>
+                <li>Encryption is typically used for data in transit, such as when data is being sent over a network.</li>
+            </ul><br>
+            <h3>Hashing</h3>
+            <ul><br>
+                <li>Hashing is a one-way process. The data is hashed using a hash function, and then the hash value cannot be reversed to the original data.</li>
+                <li>The hash function is a mathematical algorithm that takes an input of any size and produces an output of a fixed size.</li>
+                <li>The hash value of a piece of data is unique to that data. If even a single bit of the data is changed, the hash value will be completely different.</li>
+                <li>Hashing is used to verify the authenticity of data. This means that the data has not been tampered with since it was created.</li>
+                <li>Hashing is typically used for data at rest, such as data stored on a hard drive.</li>
+            </ul><br>
+        </section>
+        <section id="additional-info-section" class="card">
+            <h2>Additional Information</h2>
+            <ul><br>
+                <li>Encryption is more computationally expensive than hashing.</li>
+                <li>Hashing is not as secure as encryption.</li>
+                <li>Encryption can be used to protect both the confidentiality and integrity of data, while hashing can only be used to protect the integrity of data.</li>
+                <li>Encryption and hashing can be used together to provide even more security.</li>
+            </ul><br>
+        </section>
+        </div>
+        <div id="right-side">
+            <img src="D:\Ass.page\education-image.png" alt="Fixed Image">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Education Inc.</p>
+    </footer>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    
+    // Function to add the "active" class to sections in viewport
+    function setActiveSections() {
+        sections.forEach((section) => {
+            const bounding = section.getBoundingClientRect();
+            if (bounding.top <= window.innerHeight * 0.75 && bounding.bottom >= 0) {
+                section.classList.add("active");
+            } else {
+                section.classList.remove("active");
+            }
+        });
+    }
+
+    // Smooth scroll effect when clicking on links
+    document.querySelectorAll("a[href^='#']").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth",
+                });
+            }
+        });
+    });
+
+    // Initial call to set the active sections on page load
+    setActiveSections();
+
+    // Listen for scroll events to update active sections
+    window.addEventListener("scroll", setActiveSections);
+});
+
+    </script>
+    
+</body>
+</html>

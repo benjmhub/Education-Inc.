@@ -1,0 +1,259 @@
+ /* Reset some default styles */
+ body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a grey-black background to the body */
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Basic styling for header, sections, and footer */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Set a maximum width for the entire content */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #023011; /* Dark Chocolate color */
+    border: 1px solid #502507; /* Slightly darker border color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style headers and text */
+h1, h2, h3 {
+    color: #cf19e4;
+}
+
+/* Style links */
+a {
+    color: #00f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the left side */
+#left-side {
+    flex: 1; /* Take up all available space */
+}
+
+/* Style the right side with a fixed background image */
+#right-side {
+    flex: 0; /* Do not take up extra space */
+    background-image: url('D:\Ass.page\education-image.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image fit within the container */
+    max-width: 100%; /* Set a maximum width to prevent it from becoming too large */
+    width: 3000px; /* Set the width of the fixed image */
+    height: 100vh; /* Make the image cover the full vertical height */
+    
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    /* Adjust the width of the right-side image */
+    #right-side {
+        width: 100%; /* Make it fill the entire width */
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+  /* Add this CSS at the end of your existing styles.css file */
+
+
+
+ /* Update the CSS to include the "active" class and apply transitions */
+
+section {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Make the active section visible */
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+ /* Base styles for all screen sizes */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a grey-black background to the body */
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Basic styling for header, sections, and footer */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: transparent; /* Set background color to transparent */
+    border: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style headers and text */
+h1, h2, h3 {
+    color: #d164dd;
+}
+
+/* Style links */
+a {
+    color: #00f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the left side */
+#left-side {
+    flex: 1;
+}
+
+/* Style the right side with a fixed background image */
+#right-side {
+    flex: 0;
+    background-image: url('D:\Ass.page\education-image.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    width: 3000px;
+    height: 100vh;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile */
+@media only screen and (min-width: 480px) {
+    /* Modify styles for mobile here */
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    /* Modify styles for tablet here */
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+    /* Modify styles for desktop here */
+}
+
+/* Huge */
+@media only screen and (min-width: 1280px) {
+    /* Modify styles for huge screens here */
+}
+
+ 
+  /* Style the navigation bar */
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0; /* Add some padding for spacing */
+}
+
+/* Style navigation links */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style navigation links as buttons */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #a57c0b; /* Dark Orange */
+    padding: 10px 20px; /* Add padding to create buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #93c9d6; /* Dark Chocolate */
+    background-color: #201304; /* Darker Orange on hover */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+}
